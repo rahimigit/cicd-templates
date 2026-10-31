@@ -1,13 +1,8 @@
 name: test
 
 on:
-  push:
-    branches-ignore:
-      - 'master' # the branch will be tested before push to master
-    tags-ignore:
-      - '*.*'
-    paths-ignore:
-      - 'README.md' # if we change documentation only, we don't need to run tests
+  # automatic triggers removed 2026-10-30 to stop burning hosted-runner minutes; run manually
+  workflow_dispatch:
 
 jobs:
   test-e2e-azure-github-actions:
